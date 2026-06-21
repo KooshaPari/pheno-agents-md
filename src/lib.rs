@@ -6,8 +6,6 @@
 //!
 //! See: <https://agents.md> for the spec.
 
-#![warn(missing_docs)]
-
 use anyhow::{Context, Result};
 use serde::Deserialize;
 use std::path::Path;
