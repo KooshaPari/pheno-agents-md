@@ -1,0 +1,32 @@
+[package]
+name = "pheno-agents-md"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.78"
+license = "MIT OR Apache-2.0"
+description = "Generate AGENTS.md files for Phenotype repos (the agent constitution)."
+repository = "https://github.com/KooshaPari/pheno-agents-md"
+readme = "README.md"
+keywords = ["phenotype", "agents-md", "ai-dd", "crutch", "vibecoding"]
+categories = ["development-tools"]
+publish = true
+
+# This crate is a standalone testable unit; opt out of the parent monorepo workspace.
+[workspace]
+
+[lib]
+name = "pheno_agents_md"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pheno-agents-md"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_yaml = "0.9"
+anyhow = "1"
+
+[dev-dependencies]
+tempfile = "3"
